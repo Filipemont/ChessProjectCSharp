@@ -21,8 +21,7 @@ namespace chess_console
                     }
                 }
                 Console.WriteLine();
-            }
-            
+            }           
            
         }
     }
