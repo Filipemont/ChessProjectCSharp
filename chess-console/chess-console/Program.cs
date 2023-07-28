@@ -11,21 +11,28 @@ namespace chess_console
         {
             try
             {
-                Posicao P;
+                //Posicao P;
 
                 //P = new Posicao(3,4);
-                // Console.WriteLine("Posicao: "+P);
+                // Console.WriteLine("Posicao: "+P);                                      
+                PartidaDeXadrez partida = new PartidaDeXadrez();
+                while (!partida.terminada)
+                {
+                    Console.Clear();
+                    Tela.imprimirTabuleiro(partida.tab);
+                    Console.WriteLine();
 
-                Tabuleiro tab = new Tabuleiro(8, 8);
 
-                tab.colocarPeca(new Torre(Cor.Preta, tab), new Posicao(0, 0));
-                tab.colocarPeca(new Torre(Cor.Preta, tab), new Posicao(1, 3));
-                tab.colocarPeca(new Rei(Cor.Preta, tab), new Posicao(0, 7));
+                    Console.Write("Origem: ");
+                    Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
+                    Console.Write("Destino: ");
+                    Posicao destino = Tela.lerPosicaoXadrez().toPosicao();
 
-                tab.colocarPeca(new Torre(Cor.Branca, tab), new Posicao(0, 6));
-                tab.colocarPeca(new Rei(Cor.Branca, tab), new Posicao(2, 7));
+                    partida.executaMovimento(origem, destino);
 
-                Tela.imprimirTabuleiro(tab);
+
+                }
+                   
             }
             catch (Exception ex)
             {
