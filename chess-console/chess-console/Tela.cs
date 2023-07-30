@@ -77,7 +77,7 @@ namespace chess_console
                 else
                 {
                     ConsoleColor aux = Console.ForegroundColor;
-                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.Write(peca);
                     Console.ForegroundColor = aux;
                 }
