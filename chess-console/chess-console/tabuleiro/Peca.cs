@@ -44,5 +44,9 @@
         {
             this.qteMovimentos++;
         }
+        public void decrementarQteMovimento()
+        {
+            this.qteMovimentos--;
+        }
     }
 }
