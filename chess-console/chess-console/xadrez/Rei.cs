@@ -82,7 +82,7 @@ namespace xadrez
             }
 
             //#jogadaespecial roque
-            if (qteMovimentos == 0 && !partida.xeque{
+            if (qteMovimentos == 0 && !partida.xeque){
                 // #jogadaEspecial roque pequeno
 
                 Posicao posT1 = new Posicao(posicao.linha, posicao.coluna + 3);
@@ -106,11 +106,11 @@ namespace xadrez
                     if (tab.peca(p1) == null && tab.peca(p2) == null && tab.peca(p3) == null)
                     {
                         mat[posicao.linha, posicao.coluna - 2] = true;
-                    }
-                    return mat;
+                    }                   
                 }
+               
             }
+            return mat;
         }
     }
-
 }
